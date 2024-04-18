@@ -65,51 +65,56 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
           ),
         ),
         body: AppBackGround(
-          childWidget: SafeArea(
-            child: Column(
-              children: [
-                SizedBox(height: 90),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        MainButton(
-                            onTouch: () {}, imagePath: 'images/sushi1.png'),
-                        MainButtonLabel(label: 'Menu')
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        MainButton(
-                            onTouch: () {}, imagePath: 'images/wallet.png'),
-                        MainButtonLabel(label: 'Payment')
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: 90),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        MainButton(
-                            onTouch: () {}, imagePath: 'images/history.png'),
-                        MainButtonLabel(label: 'History')
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        MainButton(
-                            onTouch: () {},
-                            imagePath: 'images/reservation.png'),
-                        MainButtonLabel(label: 'Reservation'),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+          childWidget: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: [
+                  SizedBox(height: 90),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {}, imagePath: 'images/sushi1.png'),
+                          MainButtonLabel(label: 'Menu')
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {}, imagePath: 'images/wallet.png'),
+                          MainButtonLabel(label: 'Payment')
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 90),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {}, imagePath: 'images/history.png'),
+                          MainButtonLabel(label: 'History')
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {},
+                              imagePath: 'images/reservation.png'),
+                          MainButtonLabel(label: 'Reservation'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 170,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

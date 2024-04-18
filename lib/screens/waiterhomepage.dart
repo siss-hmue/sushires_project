@@ -67,76 +67,83 @@ class Waiter_HomePage extends StatelessWidget {
           ),
         ),
         body: AppBackGround(
-          childWidget: Column(
-            children: [
-              SizedBox(height: 90),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          childWidget: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
                 children: [
-                  Column(
+                  SizedBox(height: 90),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      MainButton(
-                        onTouch: () {},
-                        imagePath: 'images/sushi1.png',
+                      Column(
+                        children: [
+                          MainButton(
+                            onTouch: () {},
+                            imagePath: 'images/sushi1.png',
+                          ),
+                          MainButtonLabel(
+                            label: 'Menu',
+                          ),
+                        ],
                       ),
-                      MainButtonLabel(
-                        label: 'Menu',
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {
+                                Alert(
+                                  context: context,
+                                  type: AlertType.info,
+                                  desc: "Payment section is locked",
+                                ).show();
+                              },
+                              imagePath: 'images/payment_waiter.png'),
+                          MainButtonLabel(label: 'Payment'),
+                        ],
                       ),
                     ],
                   ),
-                  Column(
+                  SizedBox(
+                    height: 90,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      MainButton(
-                          onTouch: () {
-                            Alert(
-                              context: context,
-                              type: AlertType.info,
-                              desc: "Payment section is locked",
-                            ).show();
-                          },
-                          imagePath: 'images/payment_waiter.png'),
-                      MainButtonLabel(label: 'Payment'),
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {
+                                Alert(
+                                  context: context,
+                                  type: AlertType.info,
+                                  desc: "Order History section is locked",
+                                ).show();
+                              },
+                              imagePath: 'images/order_waiter.png'),
+                          MainButtonLabel(label: 'Order History'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          MainButton(
+                              onTouch: () {
+                                Alert(
+                                  context: context,
+                                  type: AlertType.info,
+                                  desc: "Reservation section is locked",
+                                ).show();
+                              },
+                              imagePath: 'images/delivery_waiter.png'),
+                          MainButtonLabel(label: 'Reservation'),
+                        ],
+                      ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 170,
                   ),
                 ],
               ),
-              SizedBox(
-                height: 90,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      MainButton(
-                          onTouch: () {
-                            Alert(
-                              context: context,
-                              type: AlertType.info,
-                              desc: "Order History section is locked",
-                            ).show();
-                          },
-                          imagePath: 'images/order_waiter.png'),
-                      MainButtonLabel(label: 'Order History'),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      MainButton(
-                          onTouch: () {
-                            Alert(
-                              context: context,
-                              type: AlertType.info,
-                              desc: "Reservation section is locked",
-                            ).show();
-                          },
-                          imagePath: 'images/delivery_waiter.png'),
-                      MainButtonLabel(label: 'Reservation'),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+            ),
           ),
         ),
       ),
