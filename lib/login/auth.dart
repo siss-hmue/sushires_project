@@ -1,4 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:sushires_project/main.dart';
 
 class Auth {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
@@ -23,7 +25,17 @@ class Auth {
         email: email, password: password);
   }
 
-  Future<void> signOut() async {
+  // Future<void> signOut() async {
+  //   await firebaseAuth.signOut();
+  // }
+  Future<void> signOut(BuildContext context) async {
     await firebaseAuth.signOut();
+    // Navigate to the firstloginpage.dart after sign-out
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MyApp(),
+      ), // Replace FirstLoginPage() with your actual first login page widget
+    );
   }
 }

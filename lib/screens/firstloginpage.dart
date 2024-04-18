@@ -3,9 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-// import 'package:sushirestaurant/screens/cashierhomepage.dart';
-// import 'package:sushirestaurant/screens/kitchenhomepage.dart';
-// import 'package:sushirestaurant/screens/waiterhomepage.dart';
+import 'package:sushires_project/login/cashier_widget_tree.dart';
 import 'package:sushires_project/login/waiter_widget_tree.dart';
 import '../components/sushibarlogo.dart';
 
@@ -146,7 +144,7 @@ class _FirstLogInPageState extends State<FirstLogInPage> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return Waiter_WidgetTree(); // change with cashier home page later **
+                          return Cashier_WidgetTree(); // change with cashier home page later **
                         },
                       ),
                     );

@@ -11,16 +11,12 @@ class Waiter_HomePage extends StatelessWidget {
 
   final User? user = Auth().currentUser;
 
-  Future<void> signOut() async {
-    await Auth().signOut();
+  Future<void> signOut(BuildContext context) async {
+    await Auth().signOut(context);
   }
 
   Widget title() {
     return const Text('Firebase Auth');
-  }
-
-  Widget signOutButton() {
-    return ElevatedButton(onPressed: signOut, child: const Text('Sign Out'));
   }
 
   @override
@@ -58,7 +54,9 @@ class Waiter_HomePage extends StatelessWidget {
               Container(
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
-                  onPressed: signOut,
+                  onPressed: () {
+                    signOut(context);
+                  },
                   child: Text('Sign out'),
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(100, 40),

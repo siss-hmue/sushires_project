@@ -4,14 +4,14 @@ import 'package:sushires_project/login/auth.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/components/sushibarlogo.dart';
 
-class Waiter_Login extends StatefulWidget {
-  const Waiter_Login({super.key});
+class Cashier_Login extends StatefulWidget {
+  const Cashier_Login({super.key});
 
   @override
-  State<Waiter_Login> createState() => _Waiter_LoginState();
+  State<Cashier_Login> createState() => _Cashier_LoginState();
 }
 
-class _Waiter_LoginState extends State<Waiter_Login> {
+class _Cashier_LoginState extends State<Cashier_Login> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -171,7 +171,7 @@ class _Waiter_LoginState extends State<Waiter_Login> {
                             height: 20,
                           ),
                           SizedBox(
-                            width: 100,
+                            width: 100, // Adjust width and height as desired
                             height: 50,
                             child: FloatingActionButton(
                               onPressed: isLogin
