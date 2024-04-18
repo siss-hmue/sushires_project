@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965703498965",
+    "project_id": "heroi-e2ae2",
+    "storage_bucket": "heroi-e2ae2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965703498965:android:03c183ae867d618d4bf65c",
+        "android_client_info": {
+          "package_name": "com.example.heroi_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRnDQb-srm0CJFz6APo8icRAzSTw3EOsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965703498965:android:22ba8f53a8e98df14bf65c",
+        "android_client_info": {
+          "package_name": "com.example.sushires_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRnDQb-srm0CJFz6APo8icRAzSTw3EOsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
