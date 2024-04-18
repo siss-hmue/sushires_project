@@ -3,7 +3,6 @@ import 'components/appbackground.dart';
 import 'screens/firstloginpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:sushires_project/login/waiter_widget_tree.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
