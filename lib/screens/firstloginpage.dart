@@ -6,7 +6,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 // import 'package:sushirestaurant/screens/cashierhomepage.dart';
 // import 'package:sushirestaurant/screens/kitchenhomepage.dart';
 // import 'package:sushirestaurant/screens/waiterhomepage.dart';
-//
+import 'package:sushires_project/login/waiter_widget_tree.dart';
 import '../components/sushibarlogo.dart';
 
 final List<String> items = [
@@ -132,34 +132,34 @@ class _FirstLogInPageState extends State<FirstLogInPage> {
               ElevatedButton(
                 onPressed: () {
                   // SISS HMUE YOU WILL FIX HERE
-                  // if (selectedValue == 'Waiter') {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) {
-                  //         return WaiterHomePage(); // change with waiter home page later **
-                  //       },
-                  //     ),
-                  //   );
-                  // } else if (selectedValue == 'Cashier') {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) {
-                  //         return CashierHomePage(); // change with cashier home page later **
-                  //       },
-                  //     ),
-                  //   );
-                  // } else {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) {
-                  //         return ChefHomePage(); // change with waiter home page later **
-                  //       },
-                  //     ),
-                  //   );
-                  // }
+                  if (selectedValue == 'Waiter') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Waiter_WidgetTree(); // change with waiter home page later **
+                        },
+                      ),
+                    );
+                  } else if (selectedValue == 'Cashier') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Waiter_WidgetTree(); // change with cashier home page later **
+                        },
+                      ),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Waiter_WidgetTree(); // change with waiter home page later **
+                        },
+                      ),
+                    );
+                  }
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(

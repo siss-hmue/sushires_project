@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:sushires_project/login/auth.dart';
 import 'package:sushires_project/components/appbackground.dart';
+import 'package:sushires_project/components/sushibarlogo.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Waiter_Login extends StatefulWidget {
+  const Waiter_Login({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Waiter_Login> createState() => _Waiter_LoginState();
 }
 
-class _LoginState extends State<Login> {
+class _Waiter_LoginState extends State<Waiter_Login> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -59,19 +60,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                      child: Image.asset('images/app_bar.png'),
-                    ),
-                    Container(
-                      child: Text(
-                        'One and Only Authentic Taste',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ),
+                    SushiBarLogo(),
                     Container(
                       child: Image.asset('images/logo.png'),
                     ),
