@@ -69,9 +69,7 @@ class Waiter_HomePage extends StatelessWidget {
         body: AppBackGround(
           childWidget: Column(
             children: [
-              SizedBox(
-                height: 90,
-              ),
+              SizedBox(height: 90),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

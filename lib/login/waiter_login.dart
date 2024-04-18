@@ -68,7 +68,7 @@ class _Waiter_LoginState extends State<Waiter_Login> {
                       child: Text(
                         "Waiter Login",
                         style: TextStyle(
-                          color: Colors.orangeAccent,
+                          color: Colors.brown,
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),

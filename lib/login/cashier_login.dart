@@ -66,9 +66,9 @@ class _Cashier_LoginState extends State<Cashier_Login> {
                     ),
                     Container(
                       child: Text(
-                        "Waiter Login",
+                        "Cashier Login",
                         style: TextStyle(
-                          color: Colors.orangeAccent,
+                          color: Colors.brown,
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
