@@ -4,6 +4,7 @@ import 'package:sushires_project/login/auth.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/components/mainbutton.dart';
 import 'package:sushires_project/components/mainbuttonlabel.dart';
+import 'package:sushires_project/screens/reservation_page.dart';
 
 class Cashier_HomePage extends StatefulWidget {
   Cashier_HomePage({super.key});
@@ -102,7 +103,16 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
                       Column(
                         children: [
                           MainButton(
-                              onTouch: () {},
+                              onTouch: () {
+                                Navigator.pop(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return ReservationPage();
+                                    },
+                                  ),
+                                );
+                              },
                               imagePath: 'images/reservation.png'),
                           MainButtonLabel(label: 'Reservation'),
                         ],
