@@ -110,7 +110,7 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
                     ],
                   ),
                   SizedBox(
-                    height: 170,
+                    height: 190,
                   ),
                 ],
               ),

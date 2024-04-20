@@ -135,7 +135,7 @@ class Waiter_HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 170,
+                    height: 190,
                   ),
                 ],
               ),
