@@ -15,10 +15,6 @@ class Waiter_HomePage extends StatelessWidget {
     await Auth().signOut(context);
   }
 
-  Widget title() {
-    return const Text('Firebase Auth');
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
