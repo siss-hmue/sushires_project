@@ -104,7 +104,7 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
                         children: [
                           MainButton(
                               onTouch: () {
-                                Navigator.pop(
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {

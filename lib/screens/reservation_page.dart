@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/screens/reservation_form.dart';
-
 import '../severs/database.dart';
 
 class ReservationPage extends StatefulWidget {
@@ -187,6 +187,7 @@ class _ReservationPageState extends State<ReservationPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -227,12 +228,14 @@ class _ReservationPageState extends State<ReservationPage> {
             ],
           ),
         ),
-        body: Container(
-          margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
-          child: Column(
-            children: [
-              Expanded(child: allCustomerDetails()),
-            ],
+        body: AppBackGround(
+          childWidget: Container(
+            margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
+            child: Column(
+              children: [
+                Expanded(child: allCustomerDetails()),
+              ],
+            ),
           ),
         ),
         // delete yan
