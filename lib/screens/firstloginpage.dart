@@ -1,9 +1,11 @@
 import 'dart:ui';
 
+import 'package:custom_alert_dialog_box/custom_alert_dialog_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:sushires_project/login/cashier_widget_tree.dart';
+import 'package:sushires_project/login/kitchen_widget_tree.dart';
 import 'package:sushires_project/login/waiter_widget_tree.dart';
 import '../components/sushibarlogo.dart';
 
@@ -148,13 +150,20 @@ class _FirstLogInPageState extends State<FirstLogInPage> {
                         },
                       ),
                     );
-                  } else {
+                  } else if (selectedValue == "Kitchen") {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return Waiter_WidgetTree(); // change with waiter home page later **
+                          return Kitchen_WidgetTree(); // change with waiter home page later **
                         },
+                      ),
+                    );
+                  } else {
+                    CustomAlertDialogBox.showCustomAlertBox(
+                      context: context,
+                      willDisplayWidget: Container(
+                        child: Text('Select Role First'),
                       ),
                     );
                   }
