@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushires_project/components/appbackground.dart';
 
 import 'cartPage.dart';
 import 'cartitem.dart';
@@ -15,7 +16,15 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(menuCategory.name),
+        backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
+        title: Text(
+          menuCategory.name,
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
@@ -31,61 +40,73 @@ class CategoryPage extends StatelessWidget {
           ),
         ],
       ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Number of columns in the grid
-          mainAxisSpacing: 8.0, // Spacing between items along the main axis
-          crossAxisSpacing: 8.0, // Spacing between items along the cross axis
-        ),
-        itemCount: menuCategory.items.length,
-        itemBuilder: (context, index) {
-          final menuItem = menuCategory.items[index];
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MenuItemPage(menuItem: menuItem),
+      body: SafeArea(
+        child: AppBackGround(
+          childWidget: GridView.builder(
+            padding: EdgeInsets.only(top: 8, left: 5, right: 5),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, // Number of columns in the grid
+              mainAxisSpacing: 8.0, // Spacing between items along the main axis
+              crossAxisSpacing:
+                  8.0, // Spacing between items along the cross axis
+            ),
+            itemCount: menuCategory.items.length,
+            itemBuilder: (context, index) {
+              final menuItem = menuCategory.items[index];
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MenuItemPage(menuItem: menuItem),
+                    ),
+                  );
+                },
+                child: Card(
+                  elevation: 2.0,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            image: DecorationImage(
+                              image: AssetImage(menuItem.imagePath),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              menuItem.name,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              menuItem.price.toString() + ' baht',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 4.0),
+                            //Text(menuItem.description),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
-            child: Card(
-              elevation: 2.0,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        image: DecorationImage(
-                          image: AssetImage(menuItem.imagePath),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          menuItem.name,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 4.0),
-                        //Text(menuItem.description),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
+          ),
+        ),
       ),
     );
   }

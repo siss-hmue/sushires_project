@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushires_project/components/appbackground.dart';
 import 'CartPage.dart';
 import 'CategoryPage.dart';
 import 'cartitem.dart';
@@ -15,7 +16,15 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu'),
+        backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
+        title: Text(
+          'Menu',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
@@ -30,23 +39,30 @@ class _MenuPageState extends State<MenuPage> {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: menuCategories.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(menuCategories[index].name),
-            //subtitle: Text(menuCategories[index].description),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      CategoryPage(menuCategory: menuCategories[index]),
+      body: AppBackGround(
+        childWidget: ListView.builder(
+          itemCount: menuCategories.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(
+                menuCategories[index].name,
+                style: TextStyle(
+                  fontSize: 20,
                 ),
-              );
-            },
-          );
-        },
+              ),
+              //subtitle: Text(menuCategories[index].description),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        CategoryPage(menuCategory: menuCategories[index]),
+                  ),
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:sushires_project/components/appbackground.dart';
 
 class OrderHistory extends StatefulWidget {
   const OrderHistory({Key? key}) : super(key: key);
@@ -12,9 +13,10 @@ class _OrderHistoryState extends State<OrderHistory> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
           title: Text(
             'Order History',
             style: TextStyle(
@@ -25,9 +27,11 @@ class _OrderHistoryState extends State<OrderHistory> {
           ),
         ),
         body: SafeArea(
-          child: Container(
-            margin: EdgeInsets.all(10),
-            child: OrdersList(),
+          child: AppBackGround(
+            childWidget: Container(
+              margin: EdgeInsets.all(10),
+              child: OrdersList(),
+            ),
           ),
         ),
       ),

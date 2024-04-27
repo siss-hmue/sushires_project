@@ -30,12 +30,12 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(
-            child: Text(
-              "Cashier Page",
-              style: TextStyle(
-                color: Colors.white,
-              ),
+          title: Text(
+            "Cashier Page",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
             ),
           ),
           backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
@@ -67,95 +67,97 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
             ],
           ),
         ),
-        body: AppBackGround(
-          childWidget: SingleChildScrollView(
-            child: SafeArea(
-              child: Column(
-                children: [
-                  SizedBox(height: 90),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          MainButton(
-                              onTouch: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return MenuPage();
-                                    },
-                                  ),
-                                );
-                              },
-                              imagePath: 'images/sushi1.png'),
-                          MainButtonLabel(label: 'Menu')
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          MainButton(
-                              onTouch: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return Payment();
-                                    },
-                                  ),
-                                );
-                              },
-                              imagePath: 'images/wallet.png'),
-                          MainButtonLabel(label: 'Payment')
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 90),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          MainButton(
-                              onTouch: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return OrderHistory();
-                                    },
-                                  ),
-                                );
-                              },
-                              imagePath: 'images/history.png'),
-                          MainButtonLabel(label: 'History')
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          MainButton(
-                              onTouch: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return ReservationPage();
-                                    },
-                                  ),
-                                );
-                              },
-                              imagePath: 'images/reservation.png'),
-                          MainButtonLabel(label: 'Reservation'),
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 190,
-                  ),
-                ],
+        body: SafeArea(
+          child: AppBackGround(
+            childWidget: SingleChildScrollView(
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    SizedBox(height: 90),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            MainButton(
+                                onTouch: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return MenuPage();
+                                      },
+                                    ),
+                                  );
+                                },
+                                imagePath: 'images/sushi1.png'),
+                            MainButtonLabel(label: 'Menu')
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            MainButton(
+                                onTouch: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Payment();
+                                      },
+                                    ),
+                                  );
+                                },
+                                imagePath: 'images/wallet.png'),
+                            MainButtonLabel(label: 'Payment')
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 90),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            MainButton(
+                                onTouch: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return OrderHistory();
+                                      },
+                                    ),
+                                  );
+                                },
+                                imagePath: 'images/history.png'),
+                            MainButtonLabel(label: 'History')
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            MainButton(
+                                onTouch: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return ReservationPage();
+                                      },
+                                    ),
+                                  );
+                                },
+                                imagePath: 'images/reservation.png'),
+                            MainButtonLabel(label: 'Reservation'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 190,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

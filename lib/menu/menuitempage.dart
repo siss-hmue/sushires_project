@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushires_project/components/appbackground.dart';
 
 import 'CartPage.dart';
 import 'cartitem.dart';
@@ -20,7 +21,12 @@ class _MenuItemPageState extends State<MenuItemPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.menuItem.name),
+        title: Text(
+          widget.menuItem.name,
+          style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
+        ),
+        backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart),
@@ -35,73 +41,84 @@ class _MenuItemPageState extends State<MenuItemPage> {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            height: 200, // Adjust height as needed
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(widget.menuItem.imagePath),
-                fit: BoxFit.cover,
+      body: SafeArea(
+        child: AppBackGround(
+          childWidget: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 200, // Adjust height as needed
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(widget.menuItem.imagePath),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.menuItem.name,
-                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 8.0),
-                Text(
-                  widget.menuItem.description,
-                  style: TextStyle(fontSize: 16.0),
-                ),
-                SizedBox(height: 16.0),
-                Row(
+              Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    IconButton(
-                      icon: Icon(Icons.remove),
+                    Text(
+                      widget.menuItem.name,
+                      style: TextStyle(
+                          fontSize: 24.0, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 8.0),
+                    Text(
+                      widget.menuItem.description,
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                    SizedBox(height: 16.0),
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.remove),
+                          onPressed: () {
+                            if (_quantity > 0) {
+                              setState(() {
+                                _quantity--;
+                              });
+                            }
+                          },
+                        ),
+                        Text(
+                          '$_quantity',
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.add),
+                          onPressed: () {
+                            setState(() {
+                              _quantity++;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16.0),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.brown),
+                      ),
                       onPressed: () {
+                        // Add the selected item to cart
                         if (_quantity > 0) {
-                          setState(() {
-                            _quantity--;
-                          });
+                          _addToCart(context, widget.menuItem, _quantity);
                         }
                       },
-                    ),
-                    Text(
-                      '$_quantity',
-                      style: TextStyle(fontSize: 20.0),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: () {
-                        setState(() {
-                          _quantity++;
-                        });
-                      },
+                      child: Text(
+                        'Add to Cart',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(height: 16.0),
-                ElevatedButton(
-                  onPressed: () {
-                    // Add the selected item to cart
-                    if (_quantity > 0) {
-                      _addToCart(context, widget.menuItem, _quantity);
-                    }
-                  },
-                  child: Text('Add to Cart'),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

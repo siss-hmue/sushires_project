@@ -21,12 +21,12 @@ class Waiter_HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(
-            child: Text(
-              "Waiter Page",
-              style: TextStyle(
-                color: Colors.white,
-              ),
+          title: Text(
+            "Waiter Page",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
             ),
           ),
           backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
