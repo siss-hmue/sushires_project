@@ -18,7 +18,7 @@ class _Kitchen_WidgetTreeState extends State<Kitchen_WidgetTree> {
         stream: Auth().authStageChanges,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Kitchen_HomePage();
+            return KitchenPage();
           } else {
             return Kitchen_Login();
           }

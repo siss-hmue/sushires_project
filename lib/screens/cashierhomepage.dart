@@ -4,6 +4,9 @@ import 'package:sushires_project/login/auth.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/components/mainbutton.dart';
 import 'package:sushires_project/components/mainbuttonlabel.dart';
+import 'package:sushires_project/menu/MenuPage.dart';
+import 'package:sushires_project/screens/orderhistory.dart';
+import 'package:sushires_project/screens/payment.dart';
 import 'package:sushires_project/screens/reservation_page.dart';
 
 class Cashier_HomePage extends StatefulWidget {
@@ -76,14 +79,34 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
                       Column(
                         children: [
                           MainButton(
-                              onTouch: () {}, imagePath: 'images/sushi1.png'),
+                              onTouch: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return MenuPage();
+                                    },
+                                  ),
+                                );
+                              },
+                              imagePath: 'images/sushi1.png'),
                           MainButtonLabel(label: 'Menu')
                         ],
                       ),
                       Column(
                         children: [
                           MainButton(
-                              onTouch: () {}, imagePath: 'images/wallet.png'),
+                              onTouch: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Payment();
+                                    },
+                                  ),
+                                );
+                              },
+                              imagePath: 'images/wallet.png'),
                           MainButtonLabel(label: 'Payment')
                         ],
                       ),
@@ -96,7 +119,17 @@ class _Cashier_HomePageState extends State<Cashier_HomePage> {
                       Column(
                         children: [
                           MainButton(
-                              onTouch: () {}, imagePath: 'images/history.png'),
+                              onTouch: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return OrderHistory();
+                                    },
+                                  ),
+                                );
+                              },
+                              imagePath: 'images/history.png'),
                           MainButtonLabel(label: 'History')
                         ],
                       ),
