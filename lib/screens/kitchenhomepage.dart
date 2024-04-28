@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:sushires_project/components/appbackground.dart';
 
 class KitchenPage extends StatefulWidget {
   const KitchenPage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class _KitchenPageState extends State<KitchenPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
@@ -25,9 +27,11 @@ class _KitchenPageState extends State<KitchenPage> {
           ),
         ),
         body: SafeArea(
-          child: Container(
-            margin: EdgeInsets.all(10),
-            child: OrdersList(),
+          child: AppBackGround(
+            childWidget: Container(
+              margin: EdgeInsets.all(10),
+              child: OrdersList(),
+            ),
           ),
         ),
       ),

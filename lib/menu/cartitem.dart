@@ -64,7 +64,7 @@ List<MenuCategory> menuCategories = [
           price: 12,
           imagePath: "images/japangreentea.png"),
       MenuItem(
-          name: 'Japanese Plum Wine(Umeshu)',
+          name: 'Plum Wine(Umeshu)',
           description: 'This is a sweet and tart liqueur made from ume plums',
           price: 10,
           imagePath: "images/redplumwine.png"),
