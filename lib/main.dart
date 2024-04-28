@@ -7,7 +7,7 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    name: "Heroi",
+    //name: "Heroi",
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
