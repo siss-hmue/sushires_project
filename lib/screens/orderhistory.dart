@@ -148,34 +148,36 @@ class OrderListItem extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             title: Text('Order Details'),
-                            content: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                ...items.map<Widget>((item) {
-                                  double totalPrice =
-                                      item['quantity'] * item['price'];
-                                  return ListTile(
-                                    title: Text(item['itemName']),
-                                    subtitle: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Quantity: ${item['quantity']}'),
-                                        Text(
-                                            'Total Price: \$${totalPrice.toStringAsFixed(2)}'),
-                                      ],
+                            content: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ...items.map<Widget>((item) {
+                                    double totalPrice =
+                                        item['quantity'] * item['price'];
+                                    return ListTile(
+                                      title: Text(item['itemName']),
+                                      subtitle: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Quantity: ${item['quantity']}'),
+                                          Text(
+                                              'Total Price: \$${totalPrice.toStringAsFixed(2)}'),
+                                        ],
+                                      ),
+                                    );
+                                  }).toList(),
+                                  SizedBox(height: 10),
+                                  Text(
+                                    'Total Amount: \$${totalAmount.toStringAsFixed(2)}',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                  );
-                                }).toList(),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Total Amount: \$${totalAmount.toStringAsFixed(2)}',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                             actions: [
                               TextButton(
