@@ -50,35 +50,6 @@ class _PaymentTypesState extends State<PaymentTypes> {
                           children: [
                             Flexible(
                               child: Text(
-                                'Receive by Cash',
-                                overflow: TextOverflow.visible,
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            Icon(Icons.money)
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 45),
-                  Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.grey[100],
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: 15, bottom: 15, left: 10, right: 10),
-                        child: Row(
-                          children: [
-                            Flexible(
-                              child: Text(
                                 'Receive by QR',
                                 overflow: TextOverflow.visible,
                                 style: TextStyle(
