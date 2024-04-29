@@ -29,6 +29,26 @@ List<MenuCategory> menuCategories = [
           description: "Steamed soybeans sprinkled with sea salt.",
           price: 5,
           imagePath: "images/crunchyroll.png"),
+      MenuItem(
+          name: "California Roll",
+          description: "takhu khu yayy",
+          price: 60,
+          imagePath: "images/CaliforniaRolls.png"),
+      MenuItem(
+          name: "Eel Nigiri",
+          description: "takhu khu yay pay",
+          price: 75,
+          imagePath: "images/EelNigiri.png"),
+      MenuItem(
+          name: "Eel Roll",
+          description: "takhu khu yay",
+          price: 85,
+          imagePath: "images/EelRoll.png"),
+      MenuItem(
+          name: "Rainbow Dragon Roll",
+          description: "takhu khu yayy",
+          price: 95,
+          imagePath: "images/RainbowDragonRoll.png"),
       // Add more items as needed
     ],
   ),
@@ -68,6 +88,22 @@ List<MenuCategory> menuCategories = [
           description: 'This is a sweet and tart liqueur made from ume plums',
           price: 10,
           imagePath: "images/redplumwine.png"),
+    ],
+  ),
+  MenuCategory(
+    name: "Others",
+    items: [
+      MenuItem(
+          name: 'Gyoza',
+          description:
+              "Crispy on the outside, tender and flavorful on the inside",
+          price: 75,
+          imagePath: "images/Gyoza.png"),
+      MenuItem(
+          name: 'Agedashi Tofu',
+          description: "takhu khu htae pay",
+          price: 75,
+          imagePath: "images/AgedashiTofu.png")
     ],
   ),
   // Add more categories as needed
