@@ -51,52 +51,52 @@ List<MenuCategory> menuCategories = [
           imagePath: "images/RainbowDragonRoll.png"),
       MenuItem(
           name: "Salmon Nigiri",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Delicate Salmon on Sushi Rice",
           price: 105,
           imagePath: "images/SalmonNigiri.jpg"),
       MenuItem(
           name: "Salmon Sashimi",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Fresh and sweet slices of Salmon",
           price: 85,
           imagePath: "images/SalmonSashimi.png"),
       MenuItem(
-          name: "Salmon temaki",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          name: "Salmon Temaki",
+          description: "fresh salmon and creamy avocado wrapped in seaweed with sushi rice",
           price: 95,
           imagePath: "images/SalmonTemaki.png"),
       MenuItem(
           name: "Sashimi Bundle",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Fresh & delicate slices of salmon, tuna, yellowtail, maguro and hamachi.",
           price: 85,
           imagePath: "images/SashimiBundle.png"),
       MenuItem(
           name: "ShrimpTempura",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Crispy and sweet shrimp deep-fried in sesame oil for better flavor.",
           price: 95,
           imagePath: "images/ShrimpTempura.png"),
       MenuItem(
           name: "Spicy Salmon Roll",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Spicy tuna salad, cucumber, and avocado,in sushi rice and seaweed.",
           price: 100,
           imagePath: "images/SpicySalmonRoll.png"),
       MenuItem(
           name: "Spider Roll",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Soft-shell crabcucumber, avocado, and spicy mayo,in sushi rice and seaweed.",
           price: 95,
           imagePath: "images/SpiderRoll.png"),
       MenuItem(
           name: "Temaki",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Crispy tempura shrimp, cucumber and creamy avocado wrapped in a seaweed.",
           price: 60,
           imagePath: "images/Temaki.png"),
       MenuItem(
           name: "Tuna Nigiri",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Delicate slice of Tuna on Sushi Rice",
           price: 95,
           imagePath: "images/TunaNigiri.png"),
       MenuItem(
           name: "Tuna Sashimi",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Fresh and delicate slices of Tuna",
           price: 130,
           imagePath: "images/TunaSashimi.png"),
       MenuItem(
@@ -177,12 +177,12 @@ List<MenuCategory> menuCategories = [
           imagePath: "images/Gyoza.png"),
       MenuItem(
           name: 'Agedashi Tofu',
-          description: "takhu khu htae pay",
+          description: "Palate cleansing Flavor of sweet and savory Tofu",
           price: 75,
           imagePath: "images/AgedashiTofu.png"),
       MenuItem(
           name: "Vege Tempura",
-          description: "Steamed soybeans sprinkled with sea salt.",
+          description: "Fresh Vegetables Deep Fried in sesame oil",
           price: 100,
           imagePath: "images/VegeTempura.png"),
     ],
