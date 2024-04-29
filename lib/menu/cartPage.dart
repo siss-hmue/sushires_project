@@ -17,7 +17,15 @@ class _CartPageState extends State<CartPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cart'),
+        title: Text(
+          'Cart',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
       ),
       body: AppBackGround(
         childWidget: ListView.builder(
@@ -46,9 +54,9 @@ class _CartPageState extends State<CartPage> {
                 ],
               ),
               subtitle:
-                  Text('Price: \$${cartItem.item.price.toStringAsFixed(2)}'),
+                  Text('Price: ${cartItem.item.price.toStringAsFixed(2)} Baht'),
               trailing: Text(
-                  'Total: \$${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)}'),
+                  'Total: ${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)} Baht'),
             );
           },
         ),
