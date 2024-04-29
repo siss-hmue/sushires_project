@@ -148,15 +148,17 @@ class OrdersList extends StatelessWidget {
                               builder: (BuildContext context) {
                                 return AlertDialog(
                                   title: Text('Order Details'),
-                                  content: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: items.map((item) {
-                                      return ListTile(
-                                        title: Text(item['itemName']),
-                                        subtitle: Text(
-                                            'Quantity: ${item['quantity']}'),
-                                      );
-                                    }).toList(),
+                                  content: SingleChildScrollView(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: items.map((item) {
+                                        return ListTile(
+                                          title: Text(item['itemName']),
+                                          subtitle: Text(
+                                              'Quantity: ${item['quantity']}'),
+                                        );
+                                      }).toList(),
+                                    ),
                                   ),
                                   actions: [
                                     TextButton(
