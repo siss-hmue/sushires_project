@@ -69,10 +69,13 @@ class _MenuItemPageState extends State<MenuItemPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      widget.menuItem.name,
-                      style: TextStyle(
-                          fontSize: 24.0, fontWeight: FontWeight.bold),
+                    Flexible(
+                      child: Text(
+                        widget.menuItem.name,
+                        overflow: TextOverflow.fade,
+                        style: TextStyle(
+                            fontSize: 24.0, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(height: 8.0),
                     Text(
