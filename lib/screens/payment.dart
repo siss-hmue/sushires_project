@@ -17,13 +17,27 @@ class _PaymentState extends State<Payment> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
-          title: Text(
-            'Payment',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+          title: Row(
+            children: [
+              GestureDetector(
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  size: 20,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Text(
+                'Payment',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
         body: SafeArea(

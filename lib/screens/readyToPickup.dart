@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/menu/databaseMenu2.dart';
 
@@ -19,13 +20,27 @@ class _ReadyToPickUpState extends State<ReadyToPickUp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFFF8774A).withOpacity(0.8),
-          title: Text(
-            'READY TO PICK UP!!!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+          title: Row(
+            children: [
+              GestureDetector(
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  size: 20,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Text(
+                'READY TO PICK UP!!!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
         body: SafeArea(

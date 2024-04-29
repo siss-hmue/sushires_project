@@ -206,6 +206,16 @@ class _ReservationPageState extends State<ReservationPage> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              GestureDetector(
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 20,
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
               Text(
                 'All',
                 style: TextStyle(

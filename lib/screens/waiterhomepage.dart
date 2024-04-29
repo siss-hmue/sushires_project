@@ -67,9 +67,9 @@ class Waiter_HomePage extends StatelessWidget {
         body: SafeArea(
           child: AppBackGround(
             childWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(height: 120),
+                //SizedBox(height: 120),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -111,9 +111,9 @@ class Waiter_HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 300,
-                ),
+                // SizedBox(
+                //   height: 300,
+                // ),
               ],
             ),
           ),
