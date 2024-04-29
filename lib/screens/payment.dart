@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sushires_project/components/appbackground.dart';
+import 'package:sushires_project/screens/paymenttype.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -136,10 +138,17 @@ class OrderListItem extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Icon(
-                Icons.payments,
-                size: 20,
-                color: Colors.grey,
+              GestureDetector(
+                child: Icon(
+                  Icons.payments,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return PaymentTypes();
+                  }));
+                },
               )
             ],
           ),
