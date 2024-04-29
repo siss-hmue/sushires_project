@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sushires_project/components/appbackground.dart';
+import 'package:sushires_project/screens/qrpage.dart';
 
 class PaymentTypes extends StatefulWidget {
   const PaymentTypes({super.key});
@@ -59,7 +61,14 @@ class _PaymentTypesState extends State<PaymentTypes> {
                               ),
                             ),
                             Spacer(),
-                            Icon(Icons.qr_code)
+                            GestureDetector(
+                                child: Icon(Icons.qr_code),
+                                onTap: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return QRPayment();
+                                  }));
+                                })
                           ],
                         ),
                       ),
