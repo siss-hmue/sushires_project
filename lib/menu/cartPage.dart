@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'cartitem.dart';
 import 'databaseMenu.dart';
@@ -36,7 +37,10 @@ class _CartPageState extends State<CartPage> {
             return ListTile(
               title: Row(
                 children: [
-                  Text(cartItem.item.name),
+                  Text(
+                    cartItem.item.name,
+                    //overflow: TextOverflow.clip,
+                  ),
                   Spacer(),
                   IconButton(
                     icon: Icon(Icons.remove),
@@ -53,10 +57,10 @@ class _CartPageState extends State<CartPage> {
                   ),
                 ],
               ),
-              subtitle:
-                  Text('Price: ${cartItem.item.price.toStringAsFixed(2)} Baht'),
-              trailing: Text(
-                  'Total: ${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)} Baht'),
+              //subtitle:
+              // Text('Price: ${cartItem.item.price.toStringAsFixed(2)} Baht'),
+              //trailing: Text(
+              //'Total: ${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)} Baht'),
             );
           },
         ),
