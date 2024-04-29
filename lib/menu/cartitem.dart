@@ -52,8 +52,48 @@ List<MenuCategory> menuCategories = [
       MenuItem(
           name: "Salmon Nigiri",
           description: "Steamed soybeans sprinkled with sea salt.",
-          price: 5,
-          imagePath: "images/.png"),
+          price: 105,
+          imagePath: "images/SalmonNigiri.jpg"),
+      MenuItem(
+          name: "Salmon Sashimi",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 85,
+          imagePath: "images/SalmonSashimi.png"),
+      MenuItem(
+          name: "Salmon temaki",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 95,
+          imagePath: "images/SalmonTemaki.png"),
+      MenuItem(
+          name: "Sashimi Bundle",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 85,
+          imagePath: "images/SashimiBundle.png"),
+      MenuItem(
+          name: "ShrimpTempura",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 95,
+          imagePath: "images/ShrimpTempura.png"),
+      MenuItem(
+          name: "Spicy Salmon Roll",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 100,
+          imagePath: "images/SpicySalmonRoll.png"),
+      MenuItem(
+          name: "Spider Roll",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 95,
+          imagePath: "images/SpiderRoll.png"),
+      MenuItem(
+          name: "Temaki",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 60,
+          imagePath: "images/Temaki.png"),
+      MenuItem(
+          name: "Tuna Nigiri",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 95,
+          imagePath: "images/TunaNigiri.png"),
       // Add more items as needed
     ],
   ),
