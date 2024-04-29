@@ -32,4 +32,16 @@ class FirestoreService {
       print('No document found with orderNumber: $orderNumber');
     }
   }
+
+  // Function to delete the orderNumber from Firestore
+  static Future<void> deleteOrder(String orderNumber) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('ReadyToPickUp')
+          .doc(orderNumber)
+          .delete();
+    } catch (e) {
+      print('Error deleting order: $e');
+    }
+  }
 }

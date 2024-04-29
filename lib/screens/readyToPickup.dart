@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sushires_project/components/appbackground.dart';
+import 'package:sushires_project/menu/databaseMenu2.dart';
 
 class ReadyToPickUp extends StatefulWidget {
   const ReadyToPickUp({super.key});
@@ -104,10 +106,15 @@ class OrderList extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Icon(
-                      Icons.check_circle_outline,
-                      size: 30,
-                      color: Colors.green,
+                    GestureDetector(
+                      child: Icon(
+                        Icons.check_circle_outline,
+                        size: 20,
+                        color: Colors.green,
+                      ),
+                      onTap: () {
+                        FirestoreService.deleteOrder(orderNumber);
+                      },
                     )
                   ],
                 ),
