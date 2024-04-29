@@ -29,7 +29,11 @@ class _ReadyToPickUpState extends State<ReadyToPickUp> {
         body: SafeArea(
           child: AppBackGround(
             childWidget: Container(
-              margin: EdgeInsets.only(left: 8, right: 8, top: 10),
+              margin: EdgeInsets.only(
+                left: 8,
+                right: 8,
+                top: 10,
+              ),
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection('ReadyToPickUp')
