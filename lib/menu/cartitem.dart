@@ -158,6 +158,12 @@ List<MenuCategory> menuCategories = [
           description: 'This is a sweet and tart liqueur made from ume plums',
           price: 10,
           imagePath: "images/redplumwine.png"),
+      MenuItem(
+          name: 'Ocha Tea',
+          description:
+              'A light, fermented rice wine that pairs well with sushi.',
+          price: 0,
+          imagePath: "images/OchaTea.jpeg"),
     ],
   ),
   MenuCategory(
