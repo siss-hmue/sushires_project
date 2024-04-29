@@ -94,6 +94,31 @@ List<MenuCategory> menuCategories = [
           description: "Steamed soybeans sprinkled with sea salt.",
           price: 95,
           imagePath: "images/TunaNigiri.png"),
+      MenuItem(
+          name: "Tuna Sashimi",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 130,
+          imagePath: "images/TunaSashimi.png"),
+      MenuItem(
+          name: "Uni Nigiri",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 200,
+          imagePath: "images/UniNigiri.png"),
+      MenuItem(
+          name: "Vegas Roll",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 90,
+          imagePath: "images/VegasRoll.png"),
+      MenuItem(
+          name: "Yellow Tail Nigiri",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 110,
+          imagePath: "images/YellowTailNigiri.png"),
+      MenuItem(
+          name: "Yellow Tail Sashimi",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 150,
+          imagePath: "images/YellowTailSashimi.png"),
       // Add more items as needed
     ],
   ),
@@ -148,7 +173,12 @@ List<MenuCategory> menuCategories = [
           name: 'Agedashi Tofu',
           description: "takhu khu htae pay",
           price: 75,
-          imagePath: "images/AgedashiTofu.png")
+          imagePath: "images/AgedashiTofu.png"),
+      MenuItem(
+          name: "Vege Tempura",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 100,
+          imagePath: "images/VegeTempura.png"),
     ],
   ),
   // Add more categories as needed
