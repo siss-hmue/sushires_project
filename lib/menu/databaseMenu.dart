@@ -24,6 +24,7 @@ class DatabaseService {
 
     // Save order data to Firestore
     await _firestore.collection('orders').doc().set(orderData);
+    await _firestore.collection('tempOrder').doc().set(orderData);
   }
 
   double _calculateTotal(List cartItems) {

@@ -5,6 +5,8 @@ import 'package:sushires_project/components/appbackground.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:sushires_project/components/mainbutton.dart';
 import 'package:sushires_project/components/mainbuttonlabel.dart';
+import 'package:sushires_project/menu/MenuPage.dart';
+import 'package:sushires_project/screens/readyToPickup.dart';
 
 class Waiter_HomePage extends StatelessWidget {
   Waiter_HomePage({super.key});
@@ -74,7 +76,16 @@ class Waiter_HomePage extends StatelessWidget {
                       Column(
                         children: [
                           MainButton(
-                            onTouch: () {},
+                            onTouch: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return MenuPage();
+                                  },
+                                ),
+                              );
+                            },
                             imagePath: 'images/sushi1.png',
                           ),
                           MainButtonLabel(
@@ -86,11 +97,10 @@ class Waiter_HomePage extends StatelessWidget {
                         children: [
                           MainButton(
                               onTouch: () {
-                                Alert(
-                                  context: context,
-                                  type: AlertType.info,
-                                  desc: "Payment section is locked",
-                                ).show();
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return ReadyToPickUp();
+                                }));
                               },
                               imagePath: 'images/payment_waiter.png'),
                           MainButtonLabel(label: 'Payment'),
