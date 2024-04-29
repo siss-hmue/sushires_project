@@ -49,6 +49,11 @@ List<MenuCategory> menuCategories = [
           description: "takhu khu yayy",
           price: 95,
           imagePath: "images/RainbowDragonRoll.png"),
+      MenuItem(
+          name: "Salmon Nigiri",
+          description: "Steamed soybeans sprinkled with sea salt.",
+          price: 5,
+          imagePath: "images/.png"),
       // Add more items as needed
     ],
   ),
