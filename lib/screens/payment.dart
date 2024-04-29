@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sushires_project/components/appbackground.dart';
 import 'package:sushires_project/screens/paymenttype.dart';
+import 'package:sushires_project/screens/qrpage.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -132,7 +133,7 @@ class OrderListItem extends StatelessWidget {
                 ),
               ),
               Text(
-                '\$${totalAmount.toStringAsFixed(2)}',
+                '${totalAmount.toStringAsFixed(2)} Baht',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

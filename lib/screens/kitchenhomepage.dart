@@ -179,7 +179,7 @@ class OrdersList extends StatelessWidget {
                         ),
                         IconButton(
                           icon: Icon(
-                            Icons.info,
+                            Icons.add_alert,
                             color: Colors.green,
                             size: 20,
                           ),

@@ -15,6 +15,7 @@ class _PaymentTypesState extends State<PaymentTypes> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFFF8774A).withOpacity(0.8),

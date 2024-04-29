@@ -164,14 +164,14 @@ class OrderListItem extends StatelessWidget {
                                         children: [
                                           Text('Quantity: ${item['quantity']}'),
                                           Text(
-                                              'Total Price: \$${totalPrice.toStringAsFixed(2)}'),
+                                              'Total Price: ${totalPrice.toStringAsFixed(2)} Baht'),
                                         ],
                                       ),
                                     );
                                   }).toList(),
                                   SizedBox(height: 10),
                                   Text(
-                                    'Total Amount: \$${totalAmount.toStringAsFixed(2)}',
+                                    'Total Amount: ${totalAmount.toStringAsFixed(2)} Baht',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),

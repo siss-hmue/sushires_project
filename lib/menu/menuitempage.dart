@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sushires_project/components/appbackground.dart';
-
 import 'CartPage.dart';
 import 'cartitem.dart';
 import 'menuitem.dart';

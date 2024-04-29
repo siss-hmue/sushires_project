@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:sushires_project/login/auth.dart';
 import 'package:sushires_project/components/appbackground.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:sushires_project/components/mainbutton.dart';
 import 'package:sushires_project/components/mainbuttonlabel.dart';
 import 'package:sushires_project/menu/MenuPage.dart';
