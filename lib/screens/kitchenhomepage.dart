@@ -1,15 +1,22 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sushires_project/menu/databaseMenu2.dart';
 
-class KitchenPage extends StatefulWidget {
-  const KitchenPage({Key? key}) : super(key: key);
+import '../login/auth.dart';
 
+class KitchenPage extends StatefulWidget {
   @override
   _KitchenPageState createState() => _KitchenPageState();
 }
 
 class _KitchenPageState extends State<KitchenPage> {
+  final User? user = Auth().currentUser;
+
+  Future<void> signOut(BuildContext context) async {
+    await Auth().signOut(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,6 +31,37 @@ class _KitchenPageState extends State<KitchenPage> {
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
+          ),
+        ),
+        endDrawer: Drawer(
+          // Define the right-side drawer content
+          child: ListView(
+            padding: EdgeInsets.fromLTRB(0, 30, 0, 30), // Adjust bottom padding
+            children: <Widget>[
+              // Add your drawer menu items here
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text('${user?.email}'),
+                onTap: () {
+                  // Navigate to the home screen// Close the drawer
+                },
+              ),
+              SizedBox(
+                height: 650,
+              ),
+              Container(
+                alignment: Alignment.bottomCenter,
+                child: ElevatedButton(
+                  onPressed: () {
+                    signOut(context);
+                  },
+                  child: Text('Sign out'),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(100, 40),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         body: SafeArea(
