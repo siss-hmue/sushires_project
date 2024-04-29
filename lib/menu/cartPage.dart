@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushires_project/components/appbackground.dart';
 import 'cartitem.dart';
 import 'databaseMenu.dart';
 
@@ -18,47 +19,49 @@ class _CartPageState extends State<CartPage> {
       appBar: AppBar(
         title: Text('Cart'),
       ),
-      body: ListView.builder(
-        itemCount: cartItems.length,
-        itemBuilder: (context, index) {
-          CartItem cartItem = cartItems[index];
+      body: AppBackGround(
+        childWidget: ListView.builder(
+          itemCount: cartItems.length,
+          itemBuilder: (context, index) {
+            CartItem cartItem = cartItems[index];
 
-          return ListTile(
-            title: Row(
-              children: [
-                Text(cartItem.item.name),
-                Spacer(),
-                IconButton(
-                  icon: Icon(Icons.remove),
-                  onPressed: () {
-                    _decreaseQuantity(index);
-                  },
-                ),
-                Text('${cartItem.quantity}'),
-                IconButton(
-                  icon: Icon(Icons.add),
-                  onPressed: () {
-                    _increaseQuantity(index);
-                  },
-                ),
-              ],
-            ),
-            subtitle:
-                Text('Price: \$${cartItem.item.price.toStringAsFixed(2)}'),
-            trailing: Text(
-                'Total: \$${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)}'),
-          );
-        },
+            return ListTile(
+              title: Row(
+                children: [
+                  Text(cartItem.item.name),
+                  Spacer(),
+                  IconButton(
+                    icon: Icon(Icons.remove),
+                    onPressed: () {
+                      _decreaseQuantity(index);
+                    },
+                  ),
+                  Text('${cartItem.quantity}'),
+                  IconButton(
+                    icon: Icon(Icons.add),
+                    onPressed: () {
+                      _increaseQuantity(index);
+                    },
+                  ),
+                ],
+              ),
+              subtitle:
+                  Text('Price: \$${cartItem.item.price.toStringAsFixed(2)}'),
+              trailing: Text(
+                  'Total: \$${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)}'),
+            );
+          },
+        ),
       ),
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(16.0),
-        color: Colors.blue,
+        color: Colors.brown,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Total: \$${total.toStringAsFixed(2)}',
+              'Total: ${total.toStringAsFixed(2)} Baht',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20.0,
@@ -79,7 +82,13 @@ class _CartPageState extends State<CartPage> {
                   ),
                 );
               },
-              child: Text('Send to Kitchen'),
+              child: Text(
+                'Send To Kitchen',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),

@@ -204,7 +204,6 @@ class _ReservationPageState extends State<ReservationPage> {
         ),
         appBar: AppBar(
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
                 child: Icon(
@@ -216,19 +215,11 @@ class _ReservationPageState extends State<ReservationPage> {
                   Navigator.pop(context);
                 },
               ),
-              Text(
-                'All',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
               SizedBox(
-                width: 5,
+                width: 60,
               ),
               Text(
-                'Reservation',
+                'All Reservation',
                 style: TextStyle(
                   color: Colors.orange,
                   fontSize: 30.0,

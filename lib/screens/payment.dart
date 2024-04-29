@@ -29,6 +29,9 @@ class _PaymentState extends State<Payment> {
                   Navigator.pop(context);
                 },
               ),
+              SizedBox(
+                width: 115,
+              ),
               Text(
                 'Payment',
                 style: TextStyle(

@@ -29,6 +29,9 @@ class _OrderHistoryState extends State<OrderHistory> {
                   Navigator.pop(context);
                 },
               ),
+              SizedBox(
+                width: 85,
+              ),
               Text(
                 'Order History',
                 style: TextStyle(
